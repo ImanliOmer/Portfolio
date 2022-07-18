@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Assistant;
+    src: url("/assets/fonts/Assistant.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("/assets/fonts/Roboto.ttf");
+}
+
+/* NavBar Start */
+
+nav {
+    background-color: black;
+    height: 80px;
+    font-family: Assistant;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .Flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    left: 75px;
+}
+
+nav .Flex .Logo .Marvel {
+    margin-right: 30px;
+    position: relative;
+    top: 3px;
+}
+
+nav .Flex .Logo .DC {
+    position: relative;
+    top: 3px;
+}
+
+nav .Flex .Menu .Home {
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    padding-left: 21px;
+    padding-top: 3px;
+    text-decoration: none;
+    transition-duration: 800ms;
+    top: 17px;
+    overflow: hidden;
+}
+
+nav .Flex .Menu .Home:hover {
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 60px var(--clr),
+    0 0 100px var(--clr)
+}
+
+nav .Flex .Menu .Home span {
+    font-size: 23px;
+    color: white;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+nav .Flex .Menu .Home:hover span {
+    opacity: 1;
+}
+
+nav .Flex .Menu .Home::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 400%;
+    background-color: var(--clr);
+    transition-duration: 1s;
+    animation: line 2s linear infinite;
+    top: -60px;
+    left: 40px;
+}
+
+nav .Flex .Menu .Home::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: black;
+    transition-duration: 500ms;
+}
+
+nav .Flex .Menu .Home:hover::after {
+    background-color: var(--clr);
+}
+
+nav .Flex .Menu .Home:hover::before {
+    width: 120%;
+    left: 0;
+}
+
+@keyframes line {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav .Flex .Menu .Basket {
+    height: 30px;
+    margin-top: 24px;
+    text-decoration: none;
+}
+
+nav .Flex .Menu .Basket sup {
+    position: relative;
+    bottom: 10px;
+    color: white;
+    font-size: large;
+}
+
+nav .Flex .Menu .Basket .BasketIcon {
+    color: white;
+    font-size: 23px;
+}
+
+nav .Flex .Menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 165px;
+}
+
+/* NavBar End */

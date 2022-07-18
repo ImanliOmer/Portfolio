@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Assistant;
+    src: url("/assets/fonts/Assistant.ttf");
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url("/assets/fonts/Roboto.ttf");
+}
+
+/* NavBar Start */
+
+nav {
+    background-color: black;
+    height: 80px;
+    font-family: Assistant;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+nav .Flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    position: relative;
+    left: 75px;
+}
+
+nav .Flex .Logo .Marvel {
+    margin-right: 30px;
+    position: relative;
+    bottom: 12px;
+}
+
+nav .Flex .Logo .DC {
+    position: relative;
+    top: 3px;
+}
+
+nav .Flex .Menu .Home {
+    position: relative;
+    display: flex;
+    width: 100px;
+    height: 40px;
+    padding-left: 21px;
+    padding-top: 3px;
+    text-decoration: none;
+    transition-duration: 800ms;
+    top: 17px;
+    overflow: hidden;
+}
+
+nav .Flex .Menu .Home:hover {
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr),
+    0 0 60px var(--clr),
+    0 0 100px var(--clr)
+}
+
+nav .Flex .Menu .Home span {
+    font-size: 23px;
+    color: white;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+nav .Flex .Menu .Home:hover span {
+    opacity: 1;
+}
+
+nav .Flex .Menu .Home::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 400%;
+    background-color: var(--clr);
+    transition-duration: 1s;
+    animation: line 2s linear infinite;
+    top: -60px;
+    left: 40px;
+}
+
+nav .Flex .Menu .Home::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background-color: black;
+    transition-duration: 500ms;
+}
+
+nav .Flex .Menu .Home:hover::after {
+    background-color: var(--clr);
+}
+
+nav .Flex .Menu .Home:hover::before {
+    width: 120%;
+    left: 0;
+}
+
+@keyframes line {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+nav .Flex .Menu .Basket {
+    height: 30px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+nav .Flex .Menu .Basket sup {
+    position: relative;
+    bottom: 10px;
+    color: white;
+    font-size: large;
+}
+
+nav .Flex .Menu .Basket .BasketIcon {
+    color: white;
+    font-size: 23px;
+}
+
+nav .Flex .Menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 165px;
+}
+
+/* NavBar End */
+
+
+
+/* Products Start */
+
+#Products {
+    height: 135vh;
+    background-image: url("/assets/images/Background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Products .Container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 1100px;
+    position: relative;
+    top: 100px;
+}
+
+#Products .Container .Cards {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    border-radius: 20px;
+    overflow: hidden;
+    font-family: Roboto;
+}
+
+#Products .Container .Cards::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    transform: skewY(345deg);
+    transition-duration: 450ms;
+}
+
+#Products .Container .Cards:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+#Products .Container .Cards .imgBox {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+}
+
+#Products .Container .Cards .imgBox img {
+    max-width: 100%;
+    transition-duration: 450ms;
+}
+
+#Products .Container .Cards:hover .imgBox img {
+    max-width: 40%;
+}
+
+#Products .Container .Cards .ContentBox {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+
+#Products .Container .Cards .ContentBox h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#Products .Container .Cards .ContentBox h2 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 10px;
+}
+
+#Products .Container .Cards .ContentBox a {
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 23px;
+    text-decoration: none;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition-duration: 450ms;
+}
+
+#Products .Container .Cards:hover .ContentBox a {
+    top: 0;
+    opacity: 1;
+}
+
+/* Cards Start */
+
+#Products .Container .Card1 {
+    background-color: #010006;
+}
+
+#Products .Container .Card1::before {
+    background-color: #ED1C22;
+}
+
+#Products .Container .Card1 .ContentBox h3 {
+    color: white;
+}
+
+#Products .Container .Card1 .ContentBox h2 {
+    color: white;
+}
+
+#Products .Container .Card1 .ContentBox a {
+    background-color: #ED1C22;
+    color: white;
+}
+
+#Products .Container .Card2 {
+    background-color: #030303;
+}
+
+#Products .Container .Card2::before {
+    background-color: #3F68A6;
+}
+
+#Products .Container .Card2 .ContentBox h3 {
+    color: white;
+}
+
+#Products .Container .Card2 .ContentBox h2 {
+    color: white;
+}
+
+#Products .Container .Card2 .ContentBox a {
+    background-color: #3F68A6;
+    color: white;
+}
+
+#Products .Container .Card3 {
+    background-color: black;
+}
+
+#Products .Container .Card3::before {
+    background-color: white;
+}
+
+#Products .Container .Card3 .ContentBox h3 {
+    color: white;
+}
+
+#Products .Container .Card3 .ContentBox h2 {
+    color: white;
+}
+
+#Products .Container .Card3 .ContentBox a {
+    background-color: white;
+    color: black;
+}
+
+#Products .Container .Card4 {
+    background-color: red;
+}
+
+#Products .Container .Card4::before {
+    background-color: yellow;
+}
+
+#Products .Container .Card4 .ContentBox h3 {
+    color: black;
+}
+
+#Products .Container .Card4 .ContentBox h2 {
+    color: black;
+}
+
+#Products .Container .Card4 .ContentBox a {
+    background-color: yellow;
+    color: black;
+}
+
+#Products .Container .Card5 {
+    background-color: #E5A444;
+}
+
+#Products .Container .Card5::before {
+    background-color: #B37963;
+}
+
+#Products .Container .Card5 .ContentBox h3 {
+    color: black;
+}
+
+#Products .Container .Card5 .ContentBox h2 {
+    color: black;
+}
+
+#Products .Container .Card5 .ContentBox a {
+    background-color: #B37963;
+    color: black;
+}
+
+
+#Products .Container .Card6 {
+    background-color: #EE1C25;
+}
+
+#Products .Container .Card6::before {
+    background-color: #00AEF0;
+}
+
+#Products .Container .Card6 .ContentBox h3 {
+    color: black;
+}
+
+#Products .Container .Card6 .ContentBox h2 {
+    color: black;
+}
+
+#Products .Container .Card6 .ContentBox a {
+    background-color: #00AEF0;
+    color: black;
+}
+
+#Products .Container .Card7 {
+    background-color: #95FFD1;
+}
+
+#Products .Container .Card7::before {
+    background-color: #46FD31;
+}
+
+#Products .Container .Card7 .ContentBox h3 {
+    color: black;
+}
+
+#Products .Container .Card7 .ContentBox h2 {
+    color: black;
+}
+
+#Products .Container .Card7 .ContentBox a {
+    background-color: #46FD31;
+    color: black;
+}
+
+#Products .Container .Card8 {
+    background-color: black;
+}
+
+#Products .Container .Card8::before {
+    background-color: #DB3849;
+}
+
+#Products .Container .Card8 .ContentBox h3 {
+    color: white;
+}
+
+#Products .Container .Card8 .ContentBox h2 {
+    color: white;
+}
+
+#Products .Container .Card8 .ContentBox a {
+    background-color: #DB3849;
+    color: black;
+}
+
+#Products .Container .Card9 {
+    background-color: #9B2322;
+}
+
+#Products .Container .Card9::before {
+    background-color: #017CC2;
+}
+
+#Products .Container .Card9 .ContentBox h3 {
+    color: white;
+}
+
+#Products .Container .Card9 .ContentBox h2 {
+    color: white;
+}
+
+#Products .Container .Card9 .ContentBox a {
+    background-color: #017CC2;
+    color: white;
+}
+
+/* Cards End */
+
+/* Products End */
